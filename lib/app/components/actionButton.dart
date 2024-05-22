@@ -9,26 +9,21 @@ class ActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 306,
-      height: 54,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Center(
-        child: Text(
-            text,
-            style: Theme.of(context)
-                .textTheme
-                .titleSmall!
-                .copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-                
-            ),
+        width: 306,
+        height: 54,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(12),
         ),
-      )
-      );
+        child: Center(
+          child: Text(
+            text,
+            style: Theme.of(context).textTheme.titleSmall!.copyWith(
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+          ),
+        ));
   }
 }

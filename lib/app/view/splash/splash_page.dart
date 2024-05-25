@@ -1,6 +1,6 @@
-import 'package:agenda_tareas/app/components/shape.dart';
-import 'package:agenda_tareas/app/components/subHeading.dart';
-import 'package:agenda_tareas/app/view/taskList/taskListPage.dart';
+import 'package:agenda_tareas/app/view/components/shape.dart';
+import 'package:agenda_tareas/app/view/components/sub_heading.dart';
+import 'package:agenda_tareas/app/view/taskList/task_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -52,11 +52,11 @@ class SplashPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.circle,
                       color: Colors.grey,
                       size: 12,
@@ -64,7 +64,7 @@ class SplashPage extends StatelessWidget {
                     SizedBox(
                       width: screenWidth / 80,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.circle,
                       color: Colors.black,
                       size: 12,
@@ -72,16 +72,16 @@ class SplashPage extends StatelessWidget {
                     SizedBox(
                       width: screenWidth / 80,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.circle,
                       color: Colors.black,
                       size: 12,
                     )
                   ],
                 ),
-                Spacer(),
-                SubHeading('Swipe to learn more'),
-                Spacer()
+                const Spacer(),
+                const SubHeading('Swipe to learn more'),
+                const Spacer()
               ],
             ),
           ),

@@ -1,12 +1,10 @@
-import 'package:agenda_tareas/app/view/splash/splashPage.dart';
+import 'package:agenda_tareas/app/view/components/add_action_button.dart';
+import 'package:agenda_tareas/app/view/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +18,33 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: primary),
         scaffoldBackgroundColor: backgroundColor,
         textTheme: Theme.of(context).textTheme.apply(
-          fontFamily: 'Poppins',
-          bodyColor: textColor,
+              fontFamily: 'Poppins',
+              bodyColor: textColor,
+            ),
+        bottomSheetTheme:
+            const BottomSheetThemeData(backgroundColor: Colors.transparent),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            minimumSize: const Size(
+              double.infinity,
+              54,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            textStyle: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+            backgroundColor: primary,
+          ),
         ),
       ),
-      home: SplashPage(),
+      initialBinding: BindingsBuilder(() {
+        Get.put(TaskController());
+      }),
+      home: const SplashPage(),
     );
   }
 }
